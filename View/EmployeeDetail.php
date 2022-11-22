@@ -9,9 +9,10 @@
 <body>
     <h2>Chi tiết nhân viên: </h2>
     <?php
-    echo "<p>Name: <b>" .$Employee->name ."</b></p>";
-    echo "<p>Age: " .$Employee->age ."</p>";
-    echo "<p>University: " .$Employee->university ."</p><br>";
+    echo "<p>IDNV: <b>" .$Employee->IDNV ."</b></p>";
+    echo "<p>Họ tên: <b>" .$Employee->Hoten ."</b></p>";
+    echo "<p>IDPB: " .$Employee->IDPB ."</p>";
+    echo "<p>Địa chỉ: " .$Employee->Diachi ."</p><br>";
     ?>
     <p><a href="javascript:history.back()">Back</a></p>
 </body>

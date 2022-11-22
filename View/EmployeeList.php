@@ -10,7 +10,7 @@
     <h2>Danh sách nhân viên:</h2>
     <?php
     foreach($EmployeeList as $Employee) {
-        echo"<p><a href='?stid=" .$Employee ->id ."'>".$Employee->name ."</a></p>";
+        echo"<p><a href='?emid=" .$Employee->IDNV ."'>".$Employee->Hoten ."</a></p>";
     }
     ?>
     <br>

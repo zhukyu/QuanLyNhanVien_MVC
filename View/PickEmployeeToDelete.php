@@ -13,7 +13,7 @@
     <form action="C_Employee.php" method="post">
         <table>
             <tr>
-                <td>Chọn ID nhân viên cần cập nhật: </td>
+                <td>Chọn ID nhân viên cần xóa: </td>
                 <td>
                     <select name="id">
                         <option value="" hidden>Chọn ID nhân viên</option>

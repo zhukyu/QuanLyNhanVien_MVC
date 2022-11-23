@@ -9,7 +9,7 @@
 <frameSet rows="80, *, 80" frameborder="0">
     <frame name="fr1" src="./View/T1.php"></frame>
     <frameSet cols="150, *, 100">
-        <frame name="fr2" src="./View/T2.php"></frame>
+        <frame name="fr2" src="./View/T2_loggedIn.php"></frame>
         <frame name="fr3" src="./View/T3.php"></frame>
         <frame name="fr4" src="./View/T4.php"></frame>
     </frameSet>

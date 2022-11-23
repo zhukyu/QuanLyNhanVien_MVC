@@ -11,8 +11,6 @@ class Ctrl_Employee
             include_once("../View/EmployeeDetail.php");
         }
 
-
-
         // Thêm nhân viên
 
         else if (isset($_GET['mod1'])) {
@@ -77,7 +75,27 @@ class Ctrl_Employee
             $Employee = new Model_Employee();
             $EmployeeList = $Employee->searchEmployee($option, $searchValue);
             include_once("../View/EmployeeList.php");
-        } else {
+        } 
+
+        // Xóa tất cả
+
+        else if (isset($_GET['mod5'])) {
+            $modelEmployee = new Model_Employee();
+            $EmployeeList = $modelEmployee->getAllEmployee();
+            include_once("../View/DeleteEmployeeAll.php");
+        } else if (isset($_POST['delete_all'])) {
+            $Employee = new Model_Employee();
+            $IDNVList = $Employee->getAllEmployeeId();
+            foreach($IDNVList as $IDNV) {
+                if(isset($_REQUEST[$IDNV])) {
+                    $Employee->deleteEmployee($_REQUEST[$IDNV]); 
+                }
+            }
+            $EmployeeList = $Employee->getAllEmployee();
+            include_once("../View/EmployeeList.php");
+        }
+
+        else {
             $modelEmployee = new Model_Employee();
             $EmployeeList = $modelEmployee->getAllEmployee();
             include_once("../View/EmployeeList.php");

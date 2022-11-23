@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách nhân viên</title>
+    <title>Danh sách phòng ban</title>
 </head>
 <body>
-    <h2>Danh sách nhân viên:</h2>
+    <h2>Danh sách phòng ban:</h2>
     <?php
-    foreach($EmployeeList as $Employee) {
-        echo"<p><a href='?emid=" .$Employee->IDNV ."'>".$Employee->Hoten ."</a></p>";
+    foreach($PhongBanList as $PhongBan) {
+        echo"<p><a href='?emid=" .$PhongBan->IDPB ."'>".$PhongBan->TenPB ."</a></p>";
     }
     ?>
     <br>

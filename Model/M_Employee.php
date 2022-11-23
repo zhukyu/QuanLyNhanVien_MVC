@@ -22,6 +22,18 @@ class Model_Employee
         return $Employees;
     }
 
+    public function getAllEmployeeId()
+    {
+        $link = new mysqli('localhost', 'root', '', 'dulieu999') or die('Could not connect: ' . $link->connect_error);
+        mysqli_select_db($link, 'DULIEU999');
+        $rs = mysqli_query($link, "SELECT IDNV FROM NHANVIEN");
+        $i = 1;
+        while ($row = mysqli_fetch_array($rs)) {
+            $IDNVList[$i++] = $row['IDNV'];
+        }
+        return $IDNVList;
+    }
+
 
     public function getEmployeeDetail($emid)
     {
